@@ -1,0 +1,27 @@
+<p><a href="http://localhost/world2base">Accueil</a>
+<p><a href="<?php echo $this->url(array('controller' => 'demande' , 'action' => 'ajouter'));?>">Ajouter une Demande</a></p>
+
+<table border='6'>
+    <tr>
+        <th>Id</th>
+        <th>Id client</th>
+        <th>Type demande</th>
+        <th>Date limite</th>
+    </tr>
+    
+    <?php foreach ($this->lesDemandes as $uneDemande) : ?>
+    
+    <tr>
+        <td><?php echo $uneDemande->NUM_DEM; ?></td>
+        <td><?php echo $uneDemande->NUM_CLI; ?></td>
+        <td><?php echo $uneDemande->TYPE_DEM; ?></td>
+        <td><?php echo $uneDemande->DATE_LIMITE; ?></td>
+        <td>
+            
+            <a href="<?php echo $this->url(array('controller' => 'demande' , 'action' => 'modifier', 'NUM_DEM'=> $uneDemande->NUM_DEM));?>">Modifier</a>
+            <a href="<?php echo $this->url(array('controller' => 'demande' , 'action' => 'supprimer', 'NUM_DEM'=> $uneDemande->NUM_DEM));?>">Supprimer</a>
+        </td>
+        
+    </tr>
+    <?php endforeach; ?>
+</table>

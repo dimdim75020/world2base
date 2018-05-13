@@ -1,0 +1,51 @@
+<p><a href="http://localhost/world2base">Accueil</a>
+<p><a href="<?php echo $this->url(array('controller' => 'locataire' , 'action' => 'ajouter'));?>">Ajouter un locataire</a></p>
+
+<table border='6'>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date de naissance</th>
+        <th>Tel</th>
+        <th>RIB</th>
+        <th>BANQUE</th>
+        <th>RUE BANQUE</th>
+        <th>CODEVILLE_BANQUE</th>
+        <th>TEL BANQUE</th>
+    </tr>
+    
+    <?php foreach ($this->lesLocataires as $unLocataire) : ?>
+    
+    <tr>
+        <td><?php echo $unLocataire->NUMEROLOC; ?></td>
+        <td><?php echo $unLocataire->NOM_LOC; ?></td>
+        <td><?php echo $unLocataire->PRENOM_LOC; ?></td>
+        <td><?php echo $unLocataire->DATENAISS; ?></td>
+        <td><?php echo $unLocataire->TEL_LOC; ?></td>
+        <td><?php echo $unLocataire->R_I_B; ?></td>
+        <td><?php echo $unLocataire->BANQUE; ?></td>
+        <td><?php echo $unLocataire->RUE_BANQUE; ?></td>
+        <td><?php echo $unLocataire->CODEVILLE_BANQUE; ?></td>
+        <td><?php echo $unLocataire->TEL_BANQUE; ?></td>
+        <td><a href="<?php echo $this->url(array('controller' => 'locataire' , 'action' => 'modifier', 'NUMEROLOC'=> $unLocataire->NUMEROLOC));?>">Modifier</a></td>
+        <td><a href="<?php echo $this->url(array('controller' => 'locataire' , 'action' => 'supprimer', 'NUMEROLOC'=> $unLocataire->NUMEROLOC));?>">Supprimer</a></td>
+        
+    </tr>
+    <?php endforeach; ?>
+</table>
+
+
+ <?php /*NUMEROLOC
+    NOM_LOC
+    PRENOM_LOC 
+    DATENAISS
+    TEL_LOC 
+    R_I_B
+    BANQUE 
+    RUE_BANQUE 
+    CODEVILLE_BANQUE
+    TEL_BANQUE  */ ?>
+  
+    
+    

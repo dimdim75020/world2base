@@ -1,0 +1,10 @@
+<p>Etês-vous sur de vouloir supprimer la visite :
+    '<?php echo $this->visite['NUMAPPART']." (identifiant: ".$this->visite['NUM_CLI'].")"; ?>'? 
+</p>
+<form action="<?php echo $this->url(array('controller'=>'visite','action'=>'supprimer')); ?> " method="post">
+<div>
+    <input type="hidden" name="NUM_CLI" value="<?php echo $this->client['NUM_CLI']; ?>" />
+    <input type="submit" name="supprimer" value="Oui" />
+    <input type="submit" name="supprimer" value="Non" />
+</div>   
+</form>

@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.12.0">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="client"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Appartement">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="detailProprio"/>
+        </controllerFile>
+        <controllerFile controllerName="Client">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Demande">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Locataire">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Proprietaire">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Visite">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Cotisation">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Recherche">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+      </controllersDirectory>
+      <formsDirectory>
+        <formFile formName="Appartement"/>
+        <formFile formName="Proprietaire"/>
+        <formFile formName="Client"/>
+        <formFile formName="Demande"/>
+        <formFile formName="Locataire"/>
+        <formFile formName="Visite"/>
+        <formFile formName="Recherche"/>
+      </formsDirectory>
+      <layoutsDirectory enabled="false"/>
+      <modelsDirectory>
+        <modelFile modelName="Country"/>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Appartement"/>
+          <dbTableFile dbTableName="AppartementRow"/>
+          <dbTableFile dbTableName="Proprietaire"/>
+          <dbTableFile dbTableName="Client"/>
+          <dbTableFile dbTableName="Demande"/>
+          <dbTableFile dbTableName="Locataire"/>
+          <dbTableFile dbTableName="Visite"/>
+          <dbTableFile dbTableName="Arrondissement"/>
+          <dbTableFile dbTableName="Recherche"/>
+        </dbTableDirectory>
+      </modelsDirectory>
+      <modulesDirectory enabled="false"/>
+      <servicesDirectory enabled="false"/>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Appartement">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="client"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Client">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Demande">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Locataire">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Proprietaire">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Visite">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Appartement">
+            <viewScriptFile forActionName="detailProprio"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Cotisation">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Recherche">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory enabled="false"/>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testApplicationDirectory>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile forControllerName="Index">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+        </testApplicationControllerDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory/>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

@@ -1,0 +1,26 @@
+<p><a href="http://localhost/world2base">Accueil</a>
+<p><a href="<?php echo $this->url(array('controller' => 'visite' , 'action' => 'ajouter'));?>">Ajouter une Visite</a></p>
+
+<table border='6'>
+    <tr>
+        <th>Id du client </th>
+        <th>ID Appartement</th>
+        <th>Date de visite</th>
+    </tr>
+    
+    <?php foreach ($this->lesVisites as $uneVisite) : ?>
+    
+    <tr>
+        <td><?php echo $uneVisite->NUM_CLI; ?></td>
+        <td><?php echo $uneVisite->NUMAPPART; ?></td>
+        <td><?php echo $uneVisite->DATE_VISITE; ?></td>
+
+        <td>
+            
+            <a href="<?php echo $this->url(array('controller' => 'visite' , 'action' => 'modifier', 'NUM_CLI'=> $uneVisite->NUM_CLI));?>">Modifier</a>
+            <a href="<?php echo $this->url(array('controller' => 'visite' , 'action' => 'supprimer', 'NUM_CLI'=> $uneVisite->NUM_CLI));?>">Supprimer</a>
+        </td>
+        
+    </tr>
+    <?php endforeach; ?>
+</table>

@@ -1,0 +1,45 @@
+<p><a href="http://localhost/world2base">Accueil</a>
+<p><a href="<?php echo $this->url(array('controller' => 'appartement', 'action' => 'ajouter')); ?>">Ajouter un Appartement</a></p>
+
+<table border='6'>
+    <tr>
+        <th>Id Appart</th>
+        <th>Type</th>
+        <th>Prix loc</th>
+        <th>Prix charge</th>
+        <th>Adresse</th>
+        <th>Arrondissement</th>
+        <th>Etage</th>
+        <th>Ascenseur</th>
+        <th>Preavis</th>
+        <th>date libre</th>
+        <th>Id propio</th>
+        <th>Id locataire</th>
+    </tr>
+
+    <?php foreach ($this->lesAppartements as $unAppartement) : ?>
+
+        <tr>
+            <td><?php echo $unAppartement->NUMAPPART; ?></td>
+            <td><?php echo $unAppartement->TYPAPPART; ?></td>
+            <td><?php echo $unAppartement->PRIX_LOC; ?></td>
+            <td><?php echo $unAppartement->PRIX_CHARG; ?></td>
+            <td><?php echo $unAppartement->RUE; ?></td>
+            <td><?php echo $unAppartement->ARRONDISSEMENT; ?></td>
+            <td><?php echo $unAppartement->ETAGE; ?></td>
+            <td><?php echo $unAppartement->ASCENSEUR; ?></td>
+            <td><?php echo $unAppartement->PREAVIS; ?></td>
+            <td><?php echo $unAppartement->DATE_LIBRE; ?></td>
+            <td><a href ="<?php echo $this->url(array('controller' => 'appartement', 'action' => 'proprio', 'NUMAPPART' => $unAppartement->NUMAPPART));
+        ?>"> <?php echo $unAppartement->NUMEROPROP ?> </a>  </td>
+            <td> <a href ="<?php echo $this->url(array('controller' => 'appartement', 'action' => 'locataire', 'NUMAPPART' => $unAppartement->NUMAPPART));
+        ?>"><?php echo $unAppartement->NUMEROLOC ?> </a></td>
+
+            <td><a href="<?php echo $this->url(array('controller' => 'appartement', 'action' => 'modifier', 'NUMAPPART' => $unAppartement->NUMAPPART)); ?>">Modifier</a></td>
+            <td><a href="<?php echo $this->url(array('controller' => 'appartement', 'action' => 'supprimer', 'NUMAPPART' => $unAppartement->NUMAPPART)); ?>">Supprimer</a><td>
+            
+
+        </tr>
+    <?php endforeach; ?>
+</table>
+

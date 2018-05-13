@@ -1,0 +1,50 @@
+<br /><br />
+</br>
+<?php
+$this->title = "Resultat de la recherche";
+$this->headTitle($this->title);
+
+
+        
+        echo $this->form;
+
+
+
+$lesapparts = array();
+$lesapparts = $this->lesapparts;
+
+if (!$lesapparts == NULL) {  
+    ?>
+
+    <table border="6">
+        <tr>
+            <th>NUMAPPART</th>
+            <th>TYPEAPPART</th>        
+            <th>PRIX_LOC</th>
+            <th>PRIX_CHARG</th>
+            <th>RUE</th>
+            <th>ARRONDISSEMENT</th>
+            <th>ETAGE</th>
+            <th>ASCENSEUR</th>
+            <th>PREAVIS</th>
+            <th>DATE_LIBRE</th>
+            <th>NUMEROPROP</th>
+            <th>NUMEROLOC</th>
+        </tr> 
+        <?php
+        foreach ($lesapparts as $unappartement) {
+            ?>
+            <tr>
+
+        <?php
+        foreach ($unappartement as $cle => $valeur) {
+            // Affichage
+            ?> <td> <?php echo $valeur . '<br>'; ?> </td> <?php
+                }
+                ?>
+            </tr>
+        <?php
+    }
+}
+?>
+</table>

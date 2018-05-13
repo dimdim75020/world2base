@@ -1,0 +1,28 @@
+<p><a href="http://localhost/world2base">Accueil</a>
+<p><a href="<?php echo $this->url(array('controller' => 'proprietaire' , 'action' => 'ajouter'));?>">Ajouter un Proprietaire</a></p>
+
+<table border='6'>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Adresse</th>
+        <th>CodeVille</th>
+        <th>Tel</th>
+    </tr>
+    
+    <?php foreach ($this->lesProprietaires as $unProprietaire) : ?>
+    
+    <tr>
+        <td><?php echo $unProprietaire->NUMEROPROP; ?></td>
+        <td><?php echo $unProprietaire->NOM; ?></td>
+        <td><?php echo $unProprietaire->PRENOM; ?></td>
+        <td><?php echo $unProprietaire->ADRESSE; ?></td>
+        <td><?php echo $unProprietaire->CODE_VILLE; ?></td>
+        <td><?php echo $unProprietaire->TEL; ?></td>
+        <td><a href="<?php echo $this->url(array('controller' => 'proprietaire' , 'action' => 'modifier', 'NUMEROPROP'=> $unProprietaire->NUMEROPROP));?>">Modifier</a></td>
+        <td><a href="<?php echo $this->url(array('controller' => 'proprietaire' , 'action' => 'supprimer', 'NUMEROPROP'=> $unProprietaire->NUMEROPROP));?>">Supprimer</a></td>
+        <td><a href="<?php echo $this->url(array('controller' => 'proprietaire' , 'action' => 'cotiser'));?>">Cotisations</a></td>
+    </tr>
+    <?php endforeach; ?>
+</table>

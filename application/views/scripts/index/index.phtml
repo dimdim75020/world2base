@@ -1,0 +1,27 @@
+<div id="welcome">
+
+
+    <h3>Projet locadir</h3>
+    
+    <a  href="<?php echo $this->url(array('controller'=> 'appartement', 'action' => 'index')); ?>">Appartement</a>
+     
+            <a  href = "<?php echo $this->url(array('controller' => 'client', 'action' => 'index')); ?>">Client</a>   
+   
+    
+            <a href = "<?php echo $this->url(array('controller' => 'demande', 'action' => 'index')); ?>">Demande</a>
+   
+
+            <a type="button" value="Locataire" href = "<?php echo $this->url(array('controller' => 'locataire', 'action' => 'index')); ?>">Locataire</a>
+    
+
+            <a type="button" value="Prorietaire" href = "<?php echo $this->url(array('controller' => 'proprietaire', 'action' => 'index')); ?>">Proprietaire</a>
+    
+
+            <a type="button" value="Visite" href = "<?php echo $this->url(array('controller' => 'visite', 'action' => 'index')); ?>">Visite</a>
+      
+    
+            <a type="button" value="Recherche" href = "<?php echo $this->url(array('controller' => 'recherche', 'action' => 'index')); ?>">Recherche</a>
+    
+    
+            <a type="button" value="Cotisation" href = "<?php echo $this->url(array('controller' => 'proprietaire', 'action' => 'cotiser')); ?>">Cotisation</a>
+    

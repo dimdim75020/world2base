@@ -1,0 +1,31 @@
+<p><a href="http://localhost/world2base">Accueil</a>
+<p><a href="<?php echo $this->url(array('controller' => 'client' , 'action' => 'ajouter'));?>">Ajouter un Client</a></p>
+
+<table border='6'>
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Adresse</th>
+        <th>CodeVille</th>
+        <th>Tel</th>
+    </tr>
+    
+    <?php foreach ($this->lesClients as $unClient) : ?>
+    
+    <tr>
+        <td><?php echo $unClient->NUM_CLI; ?></td>
+        <td><?php echo $unClient->NOM_CLI; ?></td>
+        <td><?php echo $unClient->PRENOM_CLI; ?></td>
+        <td><?php echo $unClient->ADRESSE_CLI; ?></td>
+        <td><?php echo $unClient->CODEVILLE_CLI; ?></td>
+        <td><?php echo $unClient->TEL_CLI; ?></td>
+        <td>
+            
+            <a href="<?php echo $this->url(array('controller' => 'client' , 'action' => 'modifier', 'NUM_CLI'=> $unClient->NUM_CLI));?>">Modifier</a>
+            <a href="<?php echo $this->url(array('controller' => 'client' , 'action' => 'supprimer', 'NUM_CLI'=> $unClient->NUM_CLI));?>">Supprimer</a>
+        </td>
+        
+    </tr>
+    <?php endforeach; ?>
+</table>
